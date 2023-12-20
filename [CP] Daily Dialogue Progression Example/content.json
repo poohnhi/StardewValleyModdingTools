@@ -1,0 +1,87 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Format": "1.29.0",
+
+    "DynamicTokens": [
+        {
+            "Name": "TalkNumber",
+            "Value": "1"
+        },
+        {
+            "Name": "TalkNumber",
+            "Value": "2",
+            "When": {
+                "HasFlag: currentPlayer": "WinnieNumber1"
+            }
+        },
+        {
+            "Name": "TalkNumber",
+            "Value": "3",
+            "When": {
+                "HasFlag: currentPlayer": "WinnieNumber2"
+            }
+        },
+        {
+            "Name": "TalkNumber",
+            "Value": "4",
+            "When": {
+                "HasFlag: currentPlayer": "WinnieNumber3"
+            }
+        },
+        {
+            "Name": "TalkNumber",
+            "Value": "5",
+            "When": {
+                "HasFlag: currentPlayer": "WinnieNumber4"
+            }
+        },
+        {
+            "Name": "TalkNumber",
+            "Value": "6",
+            "When": {
+                "HasFlag: currentPlayer": "WinnieNumber5"
+            }
+        },
+        {
+            "Name": "TalkNumber",
+            "Value": "7",
+            "When": {
+                "HasFlag: currentPlayer": "WinnieNumber6"
+            }
+        },
+        // keep add more TalkNumber right here if need to expand the number of dialogues
+        {
+            "Name": "WnS.Winnie.Dialogue.Friendly",
+            "Value": "TalkedToday}{{i18n:WnS.Winnie.Friendly.{{TalkNumber}}}}"
+            // change to new dialogue everyday. "TalkedToday" is the mail flag, and "TalkNumber" is a token that return the number of already seen dialogue (1, 2, 3, 4, 5)
+        },
+        {
+            "Name": "WnS.Winnie.Dialogue.Friendly",
+            "Value": "{{i18n:WnS.Winnie.Friendly.{{Random: {{Range: 1, 5}}}}}}", // change 5 to the number of max dialogue if need expand
+            "When": {
+                "Query: {{TalkNumber}} > 5": true // if out of new dialogues, return to randomize. change 5 to the number of max dialogue if need expand
+            }
+        },
+    ],
+    "Changes": [
+        // File Load
+        {
+            "LogName": "poohnhi.WnS.CP Load blank.json to init dialogue and schedule ",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/WnS.Winnie",
+            "FromFile": "Data/blank.json"
+        },
+        {
+            "LogName": "poohnhi.WnS.CP Portraits and Sprites",
+            "Action": "Load",
+            "Target": "Portraits/WnS.Winnie, Characters/WnS.Winnie",
+            "FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}.png" // Must load the base first to avoid errors
+        },
+        // File Include
+        {
+            "LogName": "poohnhi.WnS.CP Include data",
+            "Action": "Include",
+            "FromFile": "Data/TriggerActions.json, Data/Characters/Characters.json, Data/Characters/Dialogues.json"
+        },
+    ]
+}

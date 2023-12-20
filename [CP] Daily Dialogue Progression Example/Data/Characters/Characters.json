@@ -1,0 +1,61 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Changes": [
+        {
+            "LogName": "poohnhi.WnS.CP Npc Dispositions 1.6",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "WnS.Winnie": {
+                    // Basic infos
+                    "DisplayName": "{{i18n:WnS.Winnie.DisplayName}}", // This would normally use {{i18n:}} to support translations
+                    "Gender": "Female", // Male, Female or Undefined
+                    "Age": "Adult", // Child, Teen or Adult
+                    "Language": "Default", // Default or Dwarvish
+                    "HomeRegion": "Other", // Will change to Town after boat
+
+                    // Basic traits
+                    "Manner": "Rude", // Neutral, Polite or Rude
+                    "SocialAnxiety": "Shy", // Neutral, Outgoing or Shy
+                    "Optimism": "Negative", // Neutral, Negative or Positive
+
+                    // Birthday
+                    "BirthSeason": "summer",
+                    "BirthDay": 28,
+
+                    // Social features
+                    "CanSocialize": true,
+                    "CanBeRomanced": true,
+                    "CanReceiveGifts": true,
+                    "CanCommentOnPurchasedShopItems": false,
+                    "CanGreetNearbyCharacters": false,
+                    "CanVisitIsland": false,
+                    "IntroductionsQuest": false,
+                    "ItemDeliveryQuests": false,
+                    "PerfectionScore": true,
+                    "EndSlideShow": "MainGroup",
+                    "Home": [{
+                        "Id": "WinnieHome",
+                        "Location": "Farm",
+                        "Tile": {
+                            "X": 66,
+                            "Y": 15
+                        },
+                        "Direction": "Down"
+                    }],
+                    "Breather": true,
+
+                }
+            }
+        },
+        // Gift Tastes
+        {
+            "LogName": "poohnhi.WnS.CP Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "WnS.Winnie": "{{i18n:WnS.Winnie.Gift.Love |default={{i18n:WnS.Winnie.Gift.Love}}}}/202 203 373/{{i18n:WnS.Winnie.Gift.Like}}/151 253 305 308 395 614 769 798 797 279 -80/{{i18n:WnS.Winnie.Gift.Dislike|default={{i18n:WnS.Winnie.Gift.Dislike}}}}/-4 -81/{{i18n:WnS.Winnie.Gift.Hate|default={{i18n:WnS.Winnie.Gift.Hate}}}}/303 346 348 446 684 873 874 768 167 -28 215 226 907/{{i18n:WnS.Winnie.Gift.Neutral}}/260 459 613 634 635 636 637 638 -7 -75 -79 -26 -2 74/"
+            }
+        },
+    ]
+}

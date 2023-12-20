@@ -1,0 +1,35 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "poohnhi.WnS.CP_LoopDayStartedTriggers": {
+                    "Id": "poohnhi.WnS.CP_LoopDayStartedTriggers",
+                    "Trigger": "LocationChanged",
+                    "Actions": [
+                        "MarkActionApplied Current poohnhi.WnS.CP_ForgetTalkedToday false",
+                        "MarkActionApplied Current poohnhi.WnS.CP_LoopLoopDayStartedTriggers false"
+                    ]
+                },
+                "poohnhi.WnS.CP_LoopLoopDayStartedTriggers": {
+                    "Id": "poohnhi.WnS.CP_LoopLoopDayStartedTriggers",
+                    "Trigger": "DayStarted",
+                    "Actions": [
+                        "MarkActionApplied Current poohnhi.WnS.CP_LoopDayStartedTriggers false"
+                    ]
+                },
+                "poohnhi.WnS.CP_ForgetTalkedToday": {
+                    "Id": "poohnhi.WnS.CP_ForgetTalkedToday",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_MAIL_RECEIVED Current TalkedToday",
+                    "Actions": [
+                        "RemoveMail Current TalkedToday all",
+                        "AddMail Current WinnieNumber{{TalkNumber}} received",
+                        "RemoveMail Current WinnieNumber{{Query:{{TalkNumber}}-1}} all"
+                    ]
+                }
+            }
+        }
+    ]
+}

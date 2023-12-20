@@ -1,0 +1,27 @@
+{
+    "Changes": [{
+            /*
+            Algorithm
+            The game finds dialogue as follows:
+
+            Event dialogue is read from the appropriate event commands (see Modding:Event data).
+            Location-specific dialogue is read from StringsFromCSFiles <location>.cs.
+            Else character dialogue is read from the character-specific files.
+            If no dialogues were found, the game resorts to hardcoded dialogue from the StringsFromCSFiles files (specifically keys prefixed with NPC.cs).
+            */
+            "LogName": "poohnhi.WnS.CP Edit Winnie Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/WnS.Winnie",
+            "Entries": {
+                // Daily dialogues
+                "Mon": "{{WnS.Winnie.Dialogue.Friendly}}",
+                "Tue": "{{WnS.Winnie.Dialogue.Friendly}}",
+                "Wed": "{{WnS.Winnie.Dialogue.Friendly}}",
+                "Thu": "{{WnS.Winnie.Dialogue.Friendly}}",
+                "Fri": "{{WnS.Winnie.Dialogue.Friendly}}",
+                "Sat": "{{WnS.Winnie.Dialogue.Friendly}}",
+                "Sun": "{{WnS.Winnie.Dialogue.Friendly}}"
+            }
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "$schema": "https://smapi.io/schemas/manifest.json",
+    "Name": "[NPC] The Hidden Island CP",
+    "Author": "Pooh",
+    "Version": "1.0.0",
+    "Description": "Adds a pair of evil twins to your game.",
+    "UniqueID": "poohnhi.WnS.CP.TestDialogue",
+    "UpdateKeys": ["Nexus:18625"],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+    ]
+}

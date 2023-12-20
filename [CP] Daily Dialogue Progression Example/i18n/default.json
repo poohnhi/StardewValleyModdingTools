@@ -1,0 +1,16 @@
+{
+    "$schema": "https://smapi.io/schemas/i18n.json",
+    "WnS.Winnie.DisplayName": "Winnie",
+
+    "WnS.Winnie.Gift.Love": "Thanks, I love this.",
+    "WnS.Winnie.Gift.Like": "Thanks, I like this.",
+    "WnS.Winnie.Gift.Neutral": "Thanks.",
+    "WnS.Winnie.Gift.Dislike": "No thanks. I don't like this.",
+    "WnS.Winnie.Gift.Hate": "Thanks, I hate this.",
+
+    "WnS.Winnie.Friendly.1": "Hi. This should be the first time we talk.$1",
+    "WnS.Winnie.Friendly.2": "This is the second time we talk.$14",
+    "WnS.Winnie.Friendly.3": "Didn't expect to talk with you 3 times already.$10",
+    "WnS.Winnie.Friendly.4": "Good job, @.$1#$e#Hmm? You ask me why did I say that?$0#$b#I don't know.$7#$b#I just feel like you might need it, even if you yourself don't think so.$11",
+    "WnS.Winnie.Friendly.5": "I believe this is the last unique dialogue. After today, I will repeat randomly all the previous dialogues.$13",
+}
