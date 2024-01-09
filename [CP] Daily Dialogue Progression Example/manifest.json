@@ -1,11 +1,11 @@
 {
     "$schema": "https://smapi.io/schemas/manifest.json",
-    "Name": "[NPC] The Hidden Island CP",
+    "Name": "Daily Dialogue Progression Example",
     "Author": "Pooh",
-    "Version": "1.0.0",
-    "Description": "Adds a pair of evil twins to your game.",
+    "Version": "1.0.1",
+    "Description": "Track daily NPC conversations and display the next dialogue only if talked yesterday.",
     "UniqueID": "poohnhi.WnS.CP.TestDialogue",
-    "UpdateKeys": ["Nexus:18625"],
+    "UpdateKeys": [],
     "ContentPackFor": {
         "UniqueID": "Pathoschild.ContentPatcher"
     },

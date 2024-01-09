@@ -1,0 +1,45 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                // Change EDWarpTotem to whatever id you can think of. 
+                // You can even use {{ModId}}_qwerty for it so you can search it easier in CJB by typing qwerty.
+                "{{ModId}}_EDWarpTotem": { 
+                    "Name": "{{ModId}}_EDWarpTotem", // Change EDWarpTotem to whatever id you can think of (same as above)
+                    "DisplayName": "Eli & Dylan Totem", // The display name for the totem
+                    "Description": "Warp you to Eli & Dylan's house.", // The description for the totem
+                    "Type": "Basic",
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 20,
+                    "Texture": "Mods/{{ModId}}/Objects",
+                    "SpriteIndex": 0,
+                    "ContextTags": [
+                        "color_brown",
+                        "totem_item",
+                        "not_placeable"
+                    ]
+                },
+                // For adding new totem for different location, copy the above and add them here (and change item id)
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+            "Entries": {
+                // The totem ID, change it to match the above item's id
+                "{{ModId}}_EDWarpTotem": {
+                    "TotemWarp": {
+                        "Location": "TenebrousNova.EliDylan.CP_ESEDHouse", // The id of the location you want to warp to
+                        "Position": "9, 14", // The X Y coordinate
+                        "Color": { "R": 0, "G": 0, "B": 0, "A": 0 } // Color
+                    }
+                },
+                
+                // For adding new totem for different location, copy the above and add them here (and change item id)
+            }
+        }
+    ]
+}

@@ -22,7 +22,7 @@
                 "poohnhi.WnS.CP_ForgetTalkedToday": {
                     "Id": "poohnhi.WnS.CP_ForgetTalkedToday",
                     "Trigger": "DayStarted",
-                    "Condition": "PLAYER_HAS_MAIL_RECEIVED Current TalkedToday",
+                    "Condition": "PLAYER_HAS_MAIL Current TalkedToday received",
                     "Actions": [
                         "RemoveMail Current TalkedToday all",
                         "AddMail Current WinnieNumber{{TalkNumber}} received",

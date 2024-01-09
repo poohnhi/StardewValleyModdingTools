@@ -1,0 +1,17 @@
+{
+    "Name": "Custom Totem Warp",
+    "Author": "Pooh",
+    "Version": "1.0.0",
+    "Description": "Custom totem warp for easier mod testing.",
+    "UniqueID": "poohnhi.CustomTotemWarp",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "spacechase0.SpaceCore",
+            "IsRequired": true
+        }
+    ]
+}

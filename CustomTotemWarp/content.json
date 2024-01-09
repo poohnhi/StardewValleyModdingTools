@@ -1,0 +1,19 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+        {
+            "LogName": "Add totem object sprite",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Objects",
+            "FromFile": "{{TargetWithoutPath}}.png"
+        },
+        {
+            "LogName": "Add totem for Eli & Dylan",
+            "Action": "Include",
+            "FromFile": "Data/TenebrousNova.EliDylan.CP.json", // if you change this to your mod id.json, remember to rename the json file in Data folder too
+            "When": {
+                "HasMod": "TenebrousNova.EliDylan.CP" // change this to your mod id
+            }
+        }
+    ]
+}
