@@ -3,11 +3,11 @@
     "DynamicTokens": [
         {
             "Name": "text1",
-            "Value": "I love {{poohnhi.MoreGiftTasteRevealDialogue/GetItemNameForGiftTaste:(O){{poohnhi.MoreGiftTasteRevealDialogue/GetRandomItemIDForGiftTaste:Penny loved false}}}}.%revealtaste:Penny:(O){{poohnhi.MoreGiftTasteRevealDialogue/GetRandomItemIDForGiftTaste:Penny loved false}}"
+            "Value": "I love {{poohnhi.PoohCore/GetItemNameForGiftTaste:(O){{poohnhi.PoohCore/GetRandomItemIDForGiftTaste:Penny loved false}}}}.%revealtaste:Penny:(O){{poohnhi.PoohCore/GetRandomItemIDForGiftTaste:Penny loved false}}"
         },
         {
             "Name": "text2",
-            "Value": "{{poohnhi.MoreGiftTasteRevealDialogue/GetRelativeDisplayNameForGiftTaste:{{poohnhi.MoreGiftTasteRevealDialogue/GetRelativeNameForGiftTaste:Penny}}}} loves {{poohnhi.MoreGiftTasteRevealDialogue/GetItemNameForGiftTaste:(O){{poohnhi.MoreGiftTasteRevealDialogue/GetRandomItemIDForGiftTaste:Penny loved true}}}}.%revealtaste:{{poohnhi.MoreGiftTasteRevealDialogue/GetRelativeNameForGiftTaste:Penny}}:(O){{poohnhi.MoreGiftTasteRevealDialogue/GetRandomItemIDForGiftTaste:Penny loved true}}"
+            "Value": "{{poohnhi.PoohCore/GetRelativeDisplayNameForGiftTaste:{{poohnhi.PoohCore/GetRelativeNameForGiftTaste:Penny}}}} loves {{poohnhi.PoohCore/GetItemNameForGiftTaste:(O){{poohnhi.PoohCore/GetRandomItemIDForGiftTaste:Penny loved true}}}}.%revealtaste:{{poohnhi.PoohCore/GetRelativeNameForGiftTaste:Penny}}:(O){{poohnhi.PoohCore/GetRandomItemIDForGiftTaste:Penny loved true}}"
         }
     ],
     "Changes": [{
