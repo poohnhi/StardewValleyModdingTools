@@ -10,5 +10,9 @@
         "UniqueID": "Pathoschild.ContentPatcher"
     },
     "Dependencies": [
+        {
+            "UniqueID": "poohnhi.PoohCore",
+            "IsRequired": true
+        }
     ]
 }

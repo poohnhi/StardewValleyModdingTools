@@ -2,31 +2,27 @@
     "$schema": "https://smapi.io/schemas/content-patcher.json",
     "Format": "1.29.0",
     "DynamicTokens": [
+        // Check README.md for instruction!
         {
-            // this is the default dialogue so even if my mod is not installed, the game still have something to display by randomizing
             "Name": "WnSWinnie.DailyDialogue",
-            "Value": "{{i18n:WnSWinnie.DailyDialogue.{{Random: {{Range: 1, 5}}}}}}", // you will need to change 5 to the number of max daily dialogue inside of your i18n file
+            "Value": "{{i18n:WnSWinnie.DailyDialogue.{{Random: {{Range: 1, 5}}}}}}", 
         },
         {
-            // display the next dialogue in the i18n chain every day depends on the number of time you have talked to the NPC
             "Name": "WnSWinnie.DailyDialogue",
             "Value": "WinnieDialogueProgression}{{i18n:WnSWinnie.DailyDialogue.{{poohnhi.PoohCore/GetMailFlagProgressNumber:WinnieDialogueProgression}}}}",
-            // WinnieDialogueProgression} is a mail flag that check if you talked to her today and the dialogue got displayed at least once, change it to something like <NPCName>DialogueProgression instead (without the <>, and NPCName is your internal NPC name - the name should be something that no one else use)
-            // poohnhi.PoohCore/GetMailFlagProgressNumber:WinnieDialogueProgression is a CP token that returns the number of the next dialogue that should be displayed. so if you haven't talk to your NPC it will be "1", if talked once it will be "2", if talked twice it will be "3",... and so on, to display the next dialogue (within i18n)
             "When": {
                 "HasMod": "poohnhi.PoohCore",
                 "Query: {{poohnhi.PoohCore/GetMailFlagProgressNumber:WinnieDialogueProgression}} <= 5": true
-                // it keeps count of the dialogue progression, so when the player reaches the maximum number of dialogue available in i18n, dialogue will start to randomize instead (using the above default dialogue). you will need to change 5 to the number of max daily dialogue inside of your i18n file
             }
         },
     ],
     "Changes": [
         // File Load
         {
-            "LogName": "poohnhi.WnS.CP Load blank.json to init dialogue and schedule ",
+            "LogName": "poohnhi.WnS.CP Load blank.json to create her dialogue file",
             "Action": "Load",
             "Target": "Characters/Dialogue/WnSWinnie",
-            "FromFile": "Data/blank.json"
+            "FromFile": "Assets/blank.json"
         },
         {
             "LogName": "poohnhi.WnS.CP Portraits and Sprites",
@@ -34,11 +30,47 @@
             "Target": "Portraits/WnSWinnie, Characters/WnSWinnie",
             "FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}.png" // Must load the base first to avoid errors
         },
-        // File Include
         {
-            "LogName": "poohnhi.WnS.CP Include data",
-            "Action": "Include",
-            "FromFile": "Data/Characters/Characters.json, Data/Characters/Dialogues.json"
+            "LogName": "poohnhi.WnS.CP Npc Dispositions 1.6",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "WnSWinnie": {
+                    // Basic infos
+                    "DisplayName": "{{i18n:WnSWinnie.DisplayName}}", // This would normally use {{i18n:}} to support translations
+                    // Birthday
+                    "BirthSeason": "summer",
+                    "BirthDay": 28,
+                    // Social features
+                    "CanSocialize": true,
+                    "CanReceiveGifts": false,
+                    "Home": [{
+                        "Id": "WinnieHome",
+                        "Location": "Farm",
+                        "Tile": {
+                            "X": 66,
+                            "Y": 15
+                        },
+                        "Direction": "Down"
+                    }],
+                }
+            }
         },
+        // Edit Winnie's Dialogue
+        {
+            "LogName": "poohnhi.WnS.CP Edit Winnie Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/WnSWinnie",
+            "Entries": {
+                // Daily dialogues
+                "Mon": "{{WnSWinnie.DailyDialogue}}",
+                "Tue": "{{WnSWinnie.DailyDialogue}}",
+                "Wed": "{{WnSWinnie.DailyDialogue}}",
+                "Thu": "{{WnSWinnie.DailyDialogue}}",
+                "Fri": "{{WnSWinnie.DailyDialogue}}",
+                "Sat": "{{WnSWinnie.DailyDialogue}}",
+                "Sun": "{{WnSWinnie.DailyDialogue}}"
+            }
+        }
     ]
 }
