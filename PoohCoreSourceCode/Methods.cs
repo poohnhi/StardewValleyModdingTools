@@ -94,6 +94,7 @@ namespace PoohCore
                     yield break;
                 string[] tempInput = input.Split(' ');
                 string thisMailFlag = tempInput[0];
+                this.MailFlag = thisMailFlag;
                 if (!ModEntry.ListOfMailFlag.Contains(thisMailFlag))
                 {
                     ModEntry.ListOfMailFlag.Add(thisMailFlag);
