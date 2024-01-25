@@ -12,16 +12,16 @@
             */
             "LogName": "poohnhi.WnS.CP Edit Winnie Dialogue",
             "Action": "EditData",
-            "Target": "Characters/Dialogue/WnS.Winnie",
+            "Target": "Characters/Dialogue/WnSWinnie",
             "Entries": {
                 // Daily dialogues
-                "Mon": "{{WnS.Winnie.Dialogue.Friendly}}",
-                "Tue": "{{WnS.Winnie.Dialogue.Friendly}}",
-                "Wed": "{{WnS.Winnie.Dialogue.Friendly}}",
-                "Thu": "{{WnS.Winnie.Dialogue.Friendly}}",
-                "Fri": "{{WnS.Winnie.Dialogue.Friendly}}",
-                "Sat": "{{WnS.Winnie.Dialogue.Friendly}}",
-                "Sun": "{{WnS.Winnie.Dialogue.Friendly}}"
+                "Mon": "{{WnSWinnie.DailyDialogue}}",
+                "Tue": "{{WnSWinnie.DailyDialogue}}",
+                "Wed": "{{WnSWinnie.DailyDialogue}}",
+                "Thu": "{{WnSWinnie.DailyDialogue}}",
+                "Fri": "{{WnSWinnie.DailyDialogue}}",
+                "Sat": "{{WnSWinnie.DailyDialogue}}",
+                "Sun": "{{WnSWinnie.DailyDialogue}}"
             }
         }
     ]
