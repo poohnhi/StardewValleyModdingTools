@@ -1,0 +1,4 @@
+{
+    "text1": "",
+    "text2": "[CharacterName [GetRelativeNameForGiftTaste Penny]] loves [ItemName [GetRandomItemIDForGiftTaste Penny loved true]].%revealtaste:[GetRelativeNameForGiftTaste Penny]:[GetRandomItemIDForGiftTaste Penny loved true]"
+}

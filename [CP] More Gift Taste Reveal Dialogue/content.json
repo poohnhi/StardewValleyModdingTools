@@ -1,0 +1,34 @@
+{
+    "Format": "1.30.0",
+    "DynamicTokens": [
+        {
+            "Name": "text1",
+            "Value": "I love {{poohnhi.MoreGiftTasteRevealDialogue/GetItemNameForGiftTaste:(O){{poohnhi.MoreGiftTasteRevealDialogue/GetRandomItemIDForGiftTaste:Penny loved false}}}}.%revealtaste:Penny:(O){{poohnhi.MoreGiftTasteRevealDialogue/GetRandomItemIDForGiftTaste:Penny loved false}}"
+        },
+        {
+            "Name": "text2",
+            "Value": "{{poohnhi.MoreGiftTasteRevealDialogue/GetRelativeDisplayNameForGiftTaste:{{poohnhi.MoreGiftTasteRevealDialogue/GetRelativeNameForGiftTaste:Penny}}}} loves {{poohnhi.MoreGiftTasteRevealDialogue/GetItemNameForGiftTaste:(O){{poohnhi.MoreGiftTasteRevealDialogue/GetRandomItemIDForGiftTaste:Penny loved true}}}}.%revealtaste:{{poohnhi.MoreGiftTasteRevealDialogue/GetRelativeNameForGiftTaste:Penny}}:(O){{poohnhi.MoreGiftTasteRevealDialogue/GetRandomItemIDForGiftTaste:Penny loved true}}"
+        }
+    ],
+    "Changes": [{
+        "Action": "EditData",
+        "Target": "spacechase0.SpaceCore/Questions",
+        "TargetField": ["Penny"],
+        "Entries": {
+            "testGiftTastePersonal": {
+                "ID": "testGiftTastePersonal",
+                "Weight": 10,
+                "QuestionText": "What's your favorite item?",
+                "AnswerText": "{{text1}}",
+                "CanRepeatQuestion": true
+            },
+            "testGiftTasteRelative": {
+                "ID": "testGiftTasteRelative",
+                "Weight": 10,
+                "QuestionText": "What's your relative's favorite item?",
+                "AnswerText": "{{text2}}",
+                "CanRepeatQuestion": true
+            }
+        }
+    } ]
+}
