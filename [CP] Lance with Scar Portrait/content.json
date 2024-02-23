@@ -1,0 +1,44 @@
+{
+    "Format": "2.0.0",
+    "DynamicTokens": [{
+        "Name": "Festival",
+        "Value": "FlowerDance",
+        "When": {
+            "DayEvent": "flower dance",
+            "LocationName": "Forest, temp"
+        }
+    }],
+    "Changes": [
+        // Portraits and Sprite Edit
+        {
+            "LogName": "Lance in Qingsha style - Seasonal",
+            "Action": "EditImage",
+            "Target": "Portraits/Lance, Characters/Lance",
+            "FromFile": "assets/{{TargetPathOnly}}/Lance_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "HasFile:{{FromFile}}": true
+            }
+        },
+        {
+            "LogName": "Lance in Qingsha style - Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/Lance, Characters/Lance",
+            "FromFile": "assets/{{TargetPathOnly}}/Lance_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "HasFile:{{FromFile}}": true
+            }
+        },
+        {
+            "LogName": "Lance in Qingsha style - Ginger Island",
+            "Action": "EditImage",
+            "Target": "Portraits/Lance_Beach, Characters/Lance_Beach",
+            "FromFile": "assets/{{TargetPathOnly}}/Lance_Beach.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "HasFile:{{FromFile}}": true
+            }
+        }
+    ]
+}

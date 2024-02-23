@@ -1,0 +1,37 @@
+{
+   "Name": "[CP] Lance in Qingsha's Style Seasonal",
+   "Author": "Pooh",
+   "Version": "1.0.0",
+   "Description": "Gives Lance a scar and a different hairstyle based on Qingsha's portraits. Sprite and portraits are modified from Lesh version. Original sprite and outfit are from Poltergeister. See README.md for full credits.",
+   "UniqueID": "poohnhi.LanceQingshaStyle",
+   "UpdateKeys": [],
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   },
+   "Dependencies": [
+      {
+        "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+        "IsRequired": true
+      },	  
+      {
+        "UniqueID": "DSVTeam.DiverseSeasonalOutfits",
+        "IsRequired": false
+      },
+      {
+        "UniqueID": "Tanpoponoko.SeasonalOutfits",
+        "IsRequired": false
+      },
+      {
+        "UniqueID": "Poltergeister.SeasonalCuteCharacters",
+        "IsRequired": false
+      },
+      {
+        "UniqueID": "Poltergeister.CuteSprites",
+        "IsRequired": false
+      },
+      {
+        "UniqueID": "Poltergeister.SeasonalCuteSpritesSVE",
+        "IsRequired": false
+      }
+   ]
+}

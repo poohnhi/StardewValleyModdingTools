@@ -1,0 +1,5 @@
+Requirement and credits:
+- Lesh: [Lesh's Lance's sprite and portrait](https://www.nexusmods.com/stardewvalley/mods/15763) with longer hair and in vanilla style! The portraits and sprites from this mod are modified from Lesh's.
+- FlashShifter: [Stardew Valley Expanded](https://www.nexusmods.com/stardewvalley/mods/3753) - the expansion that added Lance as an NPC! Without this mod, Lance wouldn't show up.
+- Poltergeister: [Seasonal Outfits - Slightly Cuter Aesthetic for SVE](https://www.nexusmods.com/stardewvalley/mods/5969) for Lance's original seasonal sprite and outfit! The seasonal outfits from this mod are modified from Poltergeister's seasonal outfits.
+- Qingsha: [Qingsha's Lance's portrait](https://www.nexusmods.com/stardewvalley/mods/13232) for the original longer hair and eye scar HD portraits!
